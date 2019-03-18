@@ -1,0 +1,16 @@
+{
+  "name": "leetcode-js-answer",
+  "version": "1.0.0",
+  "description": "leetcode question javascript answer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "leetcode",
+    "javascript",
+    "answer"
+  ],
+  "author": "zhongdabing",
+  "license": "MIT"
+}
