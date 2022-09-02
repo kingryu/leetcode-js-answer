@@ -54,6 +54,40 @@ for (int i = 0; i < len; i++) {
  * @param {number} val
  * @return {number}
  */
-var removeElement = function(nums, val) {
+//最简回答
+var removeElement = function (nums, val) {
+    for (let i = 0; i < nums.length; i++) {
+        if (nums[i] === val) {
+            nums[i] = nums[nums.length - 1]
+            nums.length = nums.length - 1;
+            i--;
+        }
+    }
+};
+
+
+
+//更少耗时
+var removeElement = function (nums, val) {
+    for (let i = 0; i < nums.length; i++) {
+        if (nums[i] === val) {
+            if(nums.length-1!=i){
+                if (nums[nums.length - 1] !== val) {
+                    nums[i] = nums[nums.length - 1]
+                    nums.length = nums.length - 1;
+                } else {
+                    if (nums.length < 2) {
+                        nums.length = nums.length -1;
+                    } else {
+                        nums[i] = nums[nums.length - 2]
+                        nums.length = nums.length - 2;
+                        i--;
+                    }
     
+                }
+            }else{
+                nums.length = nums.length -1;
+            }
+        }
+    }
 };
